@@ -89,8 +89,8 @@ export function MealBuilder() {
 }
 
 /** Connects each original project capture to its own concise engineering story. */
-export function ProjectStory(){
-//({ project }: Readonly<{ project: Project }>) {
+export function ProjectStory({ project }: Readonly<{ project: Project }>) {
+  void project;
  // if (project.id === 'pizzeria') return <div className="project-story"><PizzaAssistant /><MealBuilder /></div>;
   //if (project.id === 'studymate') return <div className="project-story study-story"><div className="story-heading"><div><span className="eyebrow">DOCUMENT → UNDERSTANDING → PRACTICE</span><h4>A learning loop, not a one-off answer.</h4></div><Sparkles size={25} /></div><AnimatedFlow flow={project.flows[0]} /><AnimatedFlow flow={project.flows[1]} /><StudyBoundaries /></div>;
   return null;
