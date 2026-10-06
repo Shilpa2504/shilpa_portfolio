@@ -28,6 +28,8 @@ import { BrowserShowcase, ProjectStory } from './components/ProjectShowcase';
 import HeroPortrait from './components/HeroPortrait';
 import PageMotion from './components/PageMotion';
 import AmbientBubbles from './components/AmbientBubbles';
+import AiChatbot from './components/AiChatbot';
+// import ContactForm from './components/ContactForm';
 
 const CaseStudy = lazy(() => import('./components/CaseStudy'));
 const ContactDialog = lazy(() => import('./components/ContactDialog'));
@@ -360,6 +362,7 @@ function Contact() {
             <div><h3>Let’s talk about your opportunity.</h3><p>Recruiters and hiring teams: introduce yourself and leave a message.</p></div>
             <button className="button button-primary message-trigger" onClick={() => setMessageOpen(true)}>Talk to me <Mail size={18} /></button>
           </div>
+          {/* <ContactForm /> */}
           <div className="contact-bottom contact-network" data-ambient="true">
             <span className="contact-network-orbit" aria-hidden="true" />
             <div className="contact-primary">
@@ -637,6 +640,7 @@ export default function App() {
       <Suspense fallback={selected ? <output className="case-loading">Opening case study…</output> : null}>
         {selected && <CaseStudy project={selected} onClose={() => setSelected(null)} />}
       </Suspense>
+      <AiChatbot />
     </div>
     </MotionPausedContext.Provider>
   );
